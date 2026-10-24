@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informe - UNEFA</title>
+    <link rel="stylesheet" href="fuente.css">
+</head>
+<body>
+
+    
+    <section class="pagina portada">
+        <div class="encabezado-institucional">
+            <p>REPÚBLICA BOLIVARIANA DE VENEZUELA</p>
+            <p>MINISTERIO DEL PODER POPULAR PARA LA DEFENSA</p>
+            <p>UNIVERSIDAD NACIONAL EXPERIMENTAL POLITÉCNICA DE LA</p>
+            <p>FUERZA ARMADA NACIONAL</p>
+            <p>UNEFA-NÚCLEO GUÁRICO</p>
+            <p>INGENIERÍA DE SISTEMAS</p>
+        </div>
+
+        <div class="titulo-portada">
+            <h1>Capa 5 de modelo OSI<br>(Sesión)</h1>
+        </div>
+
+        <div class="pie-portada">
+            <div class="bloque-persona">
+                <p><strong>Profesor:</strong></p>
+                <p>Raul Blanco</p>
+            </div>
+            <div class="bloque-persona">
+                <p><strong>Bachiller:</strong></p>
+                <p>Enyer Rubin</p>
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="pagina contenido">
+        <h2>¿Que es la capa sesión?</h2>
+        <p> La capa de sesión también se denomina session layer.Se encarga de la conexión entre dos sistemas finales, así como de si­n­cro­ni­zar y organizar el in­te­r­ca­m­bio de datos. Gracias a ella, en caso de una in­te­rru­p­ción ine­s­pe­ra­da, la co­mu­ni­ca­ción no tiene que empezar de cero. Es la quinta capa de las siete que componen el modelo OSI, que se viene de­sa­rro­lla­n­do desde la década de los 70 con el objetivo de crear es­tá­n­da­res para la in­ter­ac­ción entre los di­fe­re­n­tes di­s­po­si­ti­vos y sistemas de una red.</p>
+       <h2>¿Control del diálogo y Modos de Comunicación?</h2>
+        <p>La capa de sesión determina el flujo de la comunicación y dictamina de qué manera interactúan las partes involucradas. Dependiendo del tipo de servicio, la sesión puede configurarse bajo distintas modalidades:</p>
+        <p><strong>Simplex:</strong> La transmisión de datos se realiza únicamente en una sola dirección sin posibilidad de respuesta.</p>
+        <p><strong>Half-Duplex (Semidúplex):</strong> La comunicación se realiza en ambas direcciones, pero solo un dispositivo puede transmitir a la vez mientras el otro escucha.</p>
+        <p><strong>Full-Duplex (Dúplex completo):</strong> Ambos sistemas finales pueden enviar y recibir datos simultáneamente de manera simultánea e independiente.</p>
+
+        <div class="numero-pagina"></div>
+    </section>
+
+    
+    <section class="pagina contenido">
+        
+        <h2>¿Protocolos representativos de la Capa 5?</h2>
+        <p>Entre los protocolos de red que operan o prestan servicios en la Capa de Sesión se destacan:</p>
+        <p><strong>RPC (Remote Procedure Call):</strong> Permite a un programa ejecutar código en otra máquina remota sin tener que preocuparse por las comunicaciones subyacentes.</p>
+        <p><strong>NetBIOS (Network Basic Input/Output System):</strong> Proporciona servicios de sesión y transporte a nivel local entre ordenadores en redes de tipo LAN.</p>
+        <p><strong>PPTP (Point-to-Point Tunneling Protocol):</strong> Protocolo utilzado para crear túneles de comunicación seguros en redes virtuales privadas (VPN).</p>
+        <h2> ¿Fundamentos del  Teleprocesos?</h2>
+        <p> La palabra teleproceso data del año de 1967, cuando un grupo de especialistas
+abreviaron el término: "Telecomunicaciones en proceso de datos", quedando finalmente
+el término Teleproceso. Las redes de telecomunicación actuales son el fruto de una
+continua evolución propiciada por el avance en el campo de la ciencia y de la tecnología.
+Buena parte de ello lo constituye el telégrafo. Es el procesamiento de datos usando las
+telecomunicaciones (transmisión de señales a grandes o pequeñas distancias). El
+teleproceso puede ejecutarse de dos maneras diferentes: on line y off line.</p>
+        
+        <p> <strong> ON LINE:</strong> Un servidor controla la transmisión y se procesa los datos
+inmediatamente después de haber sido recibidas.</p>
+        
+        <p> <strong> OFF LINE:</strong>Cuando la transmisión de datos es recibida por un dispositivo externo
+ para posteriormente ser procesada.</p>
+       
+    </section>                         
+             
+<section class="pagina contenido">
+    <h2>¿Modelo OSI/ISO?</h2>
+    <p> El modelo Open Systems Interconnection (OSI) es un modelo conceptual creado por la Organización Internacional para la Estandarización, el cual permite que diversos sistemas de comunicación se conecten usando protocolos estándar. En otras palabras, el OSI proporciona un estándar para que distintos sistemas de equipos puedan comunicarse entre sí.El modelo OSI se puede ver como un lenguaje universal para la conexión de las redes de equipos. Se basa en el concepto de dividir un sistema de comunicación en siete capas abstractas, cada una apilada sobre la anterior.</p>
+    <table>
+    <tr>
+        <th>Capa</th>
+        <th>Nombre</th>
+        <th>Descripción</th>
+    </tr>
+    <tr>
+        <td>7</td>
+        <td>CAPA DE APLICACIÓN</td>
+        <td>Capa de interacción humano-computadora, donde las aplicaciones pueden acceder a los servicios de red.</td>
+    </tr>
+    <tr>
+        <td>6</td>
+        <td>CAPA DE PRESENTACIÓN</td>
+        <td>Garantiza que los datos estén en un formato utilizable y es donde se produce el cifrado de datos.</td>
+    </tr>
+    <tr>
+        <td>5</td>
+        <td>CAPA DE SESIÓN</td>
+        <td>Mantiene las conexiones y es responsable de controlar los puertos y las sesiones.</td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td>CAPA DE TRANSPORTE</td>
+        <td>Transmite datos utilizando protocolos de transmisión, incluidos TCP y UDP.</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>CAPA DE RED</td>
+        <td>Decide qué ruta física tomarán los datos.</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>CAPA DE ENLACE DE DATOS</td>
+        <td>Define el formato de los datos en la red.</td>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>CAPA FÍSICA</td>
+        <td>Transmite el flujo de bits bruto a través del medio físico.</td>
+    </tr>
+</table>
+
+
+    <div class="numero-pagina"></div>
+</section>      
+             
+            
+<section class="pagina contenido">
+    <p> Cada capa del modelo OSI tiene una función específica y se comunica con las capas superiores e inferiores. Los ataques DDoS se dirigen a capas específicas de una conexión de red, los ataques a la capa de aplicación se dirigen a la capa 7, mientras que los ataques a la capa de protocolo se dirigen a las capas 3 y 4.</p>
+    <h2>¿principios de transmición de datos?</h2>
+    <p>La transmisión de datos se define como la acción de cursar datos, a través de un
+medio de telecomunicaciones, desde un lugar en que son originados hasta otro en el que
+son recibidos. Una de las definiciones más comunes de transmisión de datos, Parte de la
+transmisión de información que consiste en el movimiento de información codificada, de
+un punto a uno o más puntos, mediante señales eléctricas, ópticas, electrópticas o
+electromagnéticas.</p>
+       
+              <strong> Objetivos de la Transmisión de Datos:</strong> 
+    
+    <p></p><ul class="lista-elementos">
+    <li> Reducir tiempo y esfuerzo.</li>
+    <li>Aumentar la velocidad de entrega de la información.</li>
+    <li>Reducir costos de operación.</li>
+    <li>Aumentar la capacidad de las organizaciones a un costo incremental razonable.</li>
+    <li>Aumentar la calidad y cantidad de la información.</li>
+</ul>
+</p>
+    
+              <p> <strong> Comunicaciones Locales y Remotas:</strong></p>
+    <p>La transmisión de datos consiste en el movimiento de información de un punto a
+otro. El destinatario puede encontrarse cerca o lejos del emisor, Según la ubicación
+geográfica se puede hablar de dos tipos de transmisión de datos:</p>
+
+    <p></p>
+    <div class="numero-pagina"></div>
+</section>
+
+<section class="pagina contenido">
+    
+    <p><strong>Transmisión de datos local.</strong>  También denominada "en planta". Las distancias
+son pequeñas. En este caso es la propia organización la que construye las líneas
+de comunicaciones. Ej: un ordenador central al que se quieren conectar varias
+terminales en distintos puntos de un edificio.</p>
+    
+    <p><strong>Transmisión de datos remota.</strong> La distancia entre los equipos que se quieren
+comunicar es mucho mayor. Es necesario acceder a las líneas de
+telecomunicaciones para que se realice. Normalmente se accede a las líneas
+ proporcionadas por el servicio telefónico. Ej: enviar datos entre dos ciudades.</p>
+    
+    <p><strong> Comunicaciones Analógicas y Comunicaciones Digitales:</strong></p> 
+    
+    <p><strong>Fuente de información digital: </strong>Una fuente de información digital produce un
+conjunto finito de posibles mensajes. Ej: el teclado de un ordenador. </p>
+    
+    <p> <strong>Fuente de información analógica:</strong> Una fuente de información analógica produce
+mensajes que se definen en un continuo. Ej: altavoces, micrófonos.</p>
+    
+    
+    <div class="numero-pagina"></div>
+</section>
+
+    <section class="pagina contenido">
+        <h2>Conclusión</h2>
+        <p>La capa de sesión cumple un rol indispensable en las arquitecturas de red modernas al garantizar la coherencia, seguridad y continuidad de las comunicaciones entre sistemas dinámicos. Su capacidad para manejar puntos de control y administrar diálogos complejos permite que los fallos temporales en la red sean transparentes para los usuarios finales y las aplicaciones de alto nivel.</p>
+
+        <div class="numero-pagina"></div>
+    </section>
+
+</body>
+</html>

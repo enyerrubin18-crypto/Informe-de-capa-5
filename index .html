@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informe - UNEFA</title>
+    <link rel="stylesheet" href="stely.css">
+</head>
+<body>
+
+    
+    <section class="pagina portada">
+        <div class="encabezado-institucional">
+            <p>REPÚBLICA BOLIVARIANA DE VENEZUELA</p>
+            <p>MINISTERIO DEL PODER POPULAR PARA LA DEFENSA</p>
+            <p>UNIVERSIDAD NACIONAL EXPERIMENTAL POLITÉCNICA DE LA</p>
+            <p>FUERZA ARMADA NACIONAL</p>
+            <p>UNEFA-NÚCLEO GUÁRICO</p>
+            <p>INGENIERÍA DE SISTEMAS</p>
+        </div>
+
+        <div class="titulo-portada">
+            <h1>Capa 5 de trasmición de datos <br>(Sincronización)</h1>
+        </div>
+
+        <div class="pie-portada">
+            <div class="bloque-persona">
+                <p><strong>Profesor:</strong></p>
+                <p>Raul Blanco</p>
+            </div>
+            <div class="bloque-persona">
+                <p><strong>Bachiller:</strong></p>
+                <p>Enyer Rubin</p>
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="pagina contenido">
+        <h2>¿Que es la Capa 5 (Sincronización) ?</h2>
+        <p> La sincronización en la transmisión de datos es un proceso fundamental de coordinación temporal y estructural entre el emisor y el receptor que garantiza que cada bit, carácter o trama sea interpretado de manera exacta en el destino, evitando errores de lectura causados por el desfase natural entre los relojes de ambos dispositivos. Este mecanismo opera en dos niveles esenciales: a nivel de bit, donde se alinea la temporización para que el receptor sepa el instante preciso en el que debe medir los pulsos de la señal (ya sea mediante métodos asíncronos con bits de inicio y parada, o métodos síncronos que emplean un reloj compartido y codificación de línea), y a nivel de bloque o trama, encargado de delimitar con precisión dónde inician y terminan las agrupaciones de información para que el flujo continuo de datos no se mezcle. En definitiva, sin una sincronización adecuada, los impulsos que viajan a través del medio físico carecerían de un marco temporal coherente, lo que haría técnicamente imposible que el equipo receptor reconstruyera el mensaje original de forma íntegra y comprensible.</p>
+       <h2>¿Niveles de Sincronización?</h2>
+        <p>En el ámbito de la transmisión de datos, la sincronización se estructura en diferentes niveles jerárquicos para garantizar que los dispositivos se entiendan correctamente, desde la lectura de un pulso eléctrico individual hasta la recepción de un bloque completo de información. Los niveles principales son:</p>
+        <p><strong>Sincronización a Nivel de Bit (Temporización de Reloj):</strong> Es el nivel más elemental de la comunicación digital.Alinea los relojes internos del emisor y del receptor. Su objetivo es garantizar que el receptor sepa exactamente en qué milisegundo preciso debe medir el estado de la señal física (voltaje, frecuencia o luz) para interpretar correctamente si se trata de un 0 o de un 1, evitando errores por desfasaje temporal.</p>
+     
+        <div class="numero-pagina"></div>
+    </section>
+
+    
+    <section class="pagina contenido">
+        
+        <p><strong>Sincronización a Nivel de Carácter o Byte:</strong>  El nivel encargado de la agrupación elemental de los bits ya leídos.Una vez que el receptor distingue los bits individualmente, necesita saber cómo agruparlos en unidades con significado (por ejemplo, bloques de 8 bits que forman un carácter). Utiliza elementos como bits de inicio y de parada para delimitar el principio y el fin de cada byte.</p>
+        <p><strong>Sincronización a Nivel de Bloque o Trama (Frame):</strong> El nivel estructural más alto en la transmisión de datos por bloques.Delimita el inicio y el final de conjuntos grandes de información (tramas o paquetes) mediante el uso de patrones de bits especiales (banderas o flags) o campos de longitud. Esto permite que el receptor identifique claramente dónde comienza un mensaje completo y dónde termina, evitando que los datos se mezcle con la siguiente transmisión.</p>
+       
+        <h2> ¿Clasificación de los Modos de Sincronización?</h2>
+        <p> La clasificación de los modos de sincronización define la estrategia temporal con la que el emisor y el receptor coordinan el envío del flujo de datos a través del canal de comunicación. Los tres modos principales son:</p>
+        
+        <p> <strong>Transmisión Asíncrona (Sin Sincronización Continua de Reloj): </strong> Los datos se envían carácter por carácter o byte por byte de forma independiente y a intervalos de tiempo irregulares, utilizando bits de arranque y de parada para que el receptor reconozca el inicio y el fin de cada unidad sin necesidad de una línea de reloj continua, lo que resulta ideal para dispositivos de baja velocidad o periféricos intermitentes como los teclados.</p>
+        
+       <p> <strong>Transmisión Síncrona (Con Sincronización de Reloj Común): </strong>La información se agrupa en grandes bloques o tramas continuas sin espacios intermedios, apoyándose en un reloj común o en las transiciones de la propia señal física para mantener alineados a ambos extremos, logrando así una alta eficiencia y velocidad en el aprovechamiento del ancho de banda para redes de datos y comunicación entre enrutadores. </p>
+    </section>                         
+             
+<section class="pagina contenido">
+    <p> <strong> Transmisión Isócrona (En Tiempo Real Estricto):</strong> Este modo está diseñado específicamente para flujos de datos que exigen una entrega a intervalos de tiempo perfectamente constantes e ininterrumpidos, garantizando la ausencia de retardos variables para asegurar una fluidez óptima en aplicaciones de tiempo real estricto como la telefonía IP y las transmisiones multimedia en directo.</p>
+    <h2> ¿Desafíos y Problemas Comunes (Deriva de Reloj y Distorsión)?</h2>
+    <p>Durante el proceso de sincronización, los sistemas enfrentan desafíos como la deriva de reloj y la distorsión de la señal. La deriva de reloj ocurre debido a las diferencias naturales entre los osciladores del emisor y del receptor, lo que provoca que, tras la transmisión continua de muchos bits, ambos relojes se desalineen progresivamente y el receptor termine midiendo los pulsos en el instante incorrecto, afectando la lectura. Por otro lado, la distorsión se origina en el medio físico debido a factores como el ruido eléctrico, la atenuación y el desfase, alterando la forma de onda de la señal original y dificultando que el circuito de temporización detecte las transiciones necesarias para mantener el sincronismo, lo que puede desencadenar la corrupción o la pérdida de la información.</p>
+    <h2>¿Aplicaciones Prácticas en Sistemas y Redes de Computadoras?</h2>
+    <p> Las aplicaciones prácticas de la sincronización en sistemas y redes de computadoras abarcan escenarios tecnológicos esenciales, como el uso de protocolos de tiempo (NTP y PTP) para alinear servidores en infraestructuras distribuidas, la transmisión fluida de voz y video en tiempo real mediante flujos isócronos, transacciones financieras globales que exigen precisión de milisegundos para evitar discrepancias, y la comunicación coordinada en redes locales (LAN) y dispositivos periféricos para garantizar el intercambio de información sin pérdida de datos.</p>
+    <div class="numero-pagina"></div>
+</section>      
+    
+    <div class="numero-pagina"></div>
+</section>
+
+    <section class="pagina contenido">
+        <h2>Conclusión</h2>
+        <p>La sincronización es el proceso fundamental de coordinación temporal y estructural que permite al emisor y al receptor interpretar con precisión cada bit y bloque de datos. Este mecanismo opera a nivel de bit, carácter y trama mediante tres modos principales: la transmisión asíncrona, que utiliza bits de arranque y parada; la síncrona, que se apoya en un reloj común para lograr alta eficiencia; y la isócrona, diseñada para flujos estrictos en tiempo real. No obstante, el proceso enfrenta desafíos técnicos como la deriva de reloj y la distorsión de la señal en el medio físico. Sus aplicaciones prácticas resultan indispensables para alinear servidores distribuidos mediante protocolos de tiempo, garantizar transmisiones multimedia fluidas y coordinar redes locales y transacciones financieras sin pérdida de datos.</p>
+
+        <div class="numero-pagina"></div>
+    </section>
+
+</body>
+</html>
